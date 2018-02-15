@@ -34,6 +34,7 @@ elsif repa == "y"
       make_move(board, nposition)
       puts "here is your move on the board"
       display_board(board)
+    end
     
     puts "end of game. Thanks for playing #{user_name}!"
 end
