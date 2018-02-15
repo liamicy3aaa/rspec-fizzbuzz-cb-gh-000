@@ -27,13 +27,13 @@ elsif repa == "y"
     puts "here is the game board"
     board = [" "," "," "," "," "," "," "," "," "]
     display_board(board)
-    for(int i=0; i<9; i++) {
-    puts "Whats your move #{user_name}?"
-    position = gets.strip
-    nposition = input_to_index(position)
-    make_move(board, nposition)
-    puts "here is your move on the board"
-    display_board(board)
-    }
+    9.Times do
+      puts "Whats your move #{user_name}?"
+      position = gets.strip
+      nposition = input_to_index(position)
+      make_move(board, nposition)
+      puts "here is your move on the board"
+      display_board(board)
+    
     puts "end of game. Thanks for playing #{user_name}!"
 end
