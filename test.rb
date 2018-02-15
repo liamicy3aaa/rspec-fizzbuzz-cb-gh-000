@@ -19,12 +19,7 @@ def check_if_used(board, index)
 end
 
 def make_move(board, position, character = "X")
-  if check_if_used(board, position) == true
-    puts "Already taken!"
-    break
-  else
     board[position] = character
-  end
 end
 
 
@@ -45,6 +40,10 @@ elsif repa == "y"
       puts "Whats your move #{user_name}?"
       position = gets.strip
       nposition = input_to_index(position)
+      if(check_if_used(board, nposition) == true)
+        puts "Already used"
+        break
+      end
       make_move(board, nposition)
       puts "here is your move on the board"
       display_board(board)
