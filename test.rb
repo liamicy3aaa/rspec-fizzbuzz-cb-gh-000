@@ -10,9 +10,20 @@ def input_to_index(input)
     index = input.to_i - 1
 end
 
+def check_if_used(board, index)
+  if(board[index] == " X " or board[index] == " O ")
+    return true
+  else
+    return false
+  end
+end
+
 def make_move(board, position, character = "X")
+  if check_if_used(board, position) == true
+    
     board[position] = character
 end
+
 
 puts "Welcome to liam's test game of tic tac toe!"
 puts "Do you want to play?"
