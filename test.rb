@@ -20,8 +20,11 @@ end
 
 def make_move(board, position, character = "X")
   if check_if_used(board, position) == true
-    
+    puts "Already taken!"
+    break
+  else
     board[position] = character
+  end
 end
 
 
