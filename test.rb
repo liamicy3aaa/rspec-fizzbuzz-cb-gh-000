@@ -27,7 +27,7 @@ elsif repa == "y"
     puts "here is the game board"
     board = [" "," "," "," "," "," "," "," "," "]
     display_board(board)
-    9.Times do
+    9.times do
       puts "Whats your move #{user_name}?"
       position = gets.strip
       nposition = input_to_index(position)
