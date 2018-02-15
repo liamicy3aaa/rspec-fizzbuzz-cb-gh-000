@@ -26,7 +26,8 @@ elsif repa == "y"
     display_board(board)
     puts "Whats your move?"
     position = gets.strip
-    make_move(board, position)
+    nposition = input_to_index(position)
+    make_move(board, nposition)
     puts = "here is your move on the board"
     display_board(board)
     puts = "end of game"
