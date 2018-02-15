@@ -21,14 +21,17 @@ if repa == "n"
     puts "Ok, let me know when you want to play"
 elsif repa == "y"
     puts "Good! You want to play"
+    puts "First, tell me your name?"
+    user_name = gets.strip
+    puts("Hello #{user_name}! Thats a lovely name!")
     puts "here is the game board"
     board = [" "," "," "," "," "," "," "," "," "]
     display_board(board)
-    puts "Whats your move?"
+    puts "Whats your move #{user_name}?"
     position = gets.strip
     nposition = input_to_index(position)
     make_move(board, nposition)
     puts "here is your move on the board"
     display_board(board)
-    puts "end of game"
+    puts "end of game. Thanks for playing #{user_name}!"
 end
