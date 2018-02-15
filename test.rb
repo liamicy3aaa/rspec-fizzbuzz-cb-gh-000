@@ -18,7 +18,7 @@ puts "Welcome to liam's test game of tic tac toe!"
 puts "Do you want to play?"
 repa = gets.strip
 if repa == "n"
-    
+    puts "Ok, let me know when you want to play"
 elsif repa == "y"
     puts "Good! You want to play"
     puts "here is the game board"
